@@ -1374,7 +1374,8 @@ input, textarea { font: inherit; }
   flex-shrink: 0;
 }
 
-[data-theme="dark"] .tech-badge img[src*="nextjs"] {
+[data-theme="dark"] .tech-badge img[src*="nextjs"],
+[data-theme="dark"] .tech-badge img[src*="github"] {
   filter: invert(1);
 }
 .tech-badge:hover {
