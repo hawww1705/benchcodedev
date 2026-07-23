@@ -1,0 +1,12 @@
+{
+  "name": "benchcode-dev",
+  "version": "1.0.0",
+  "description": "BenchCode Dev — IT Consultant & Software Development Company Website",
+  "scripts": {
+    "dev": "npx serve . --listen 3000",
+    "start": "npx serve . --listen 3000"
+  },
+  "keywords": ["benchcode", "IT consultant", "website"],
+  "author": "BenchCode Dev",
+  "license": "ISC"
+}

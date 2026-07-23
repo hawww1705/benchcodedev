@@ -1,0 +1,1086 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="BenchCode Dev — IT Consultant & Software Development Company. We help businesses accelerate digital transformation through websites, mobile apps, cloud solutions, automation, UI/UX design, and IT consulting." />
+  <meta name="keywords" content="IT consultant, software development, web development, mobile app, UI/UX design, cloud solutions, digital transformation, BenchCode Dev" />
+  <meta property="og:title" content="BenchCode Dev — IT Consultant & Software Development" />
+  <meta property="og:description" content="Empowering businesses through modern technology. Custom websites, mobile apps, cloud solutions, and IT consulting." />
+  <meta property="og:type" content="website" />
+  <meta name="robots" content="index, follow" />
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+  <title>BenchCode Dev — IT Consultant & Software Development</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ── Scroll Progress ─────────────────────────────────────────── -->
+  <div id="scroll-progress" role="progressbar" aria-label="Page scroll progress"></div>
+
+  <!-- ── Cursor Glow ────────────────────────────────────────────── -->
+  <div id="cursor-glow" aria-hidden="true"></div>
+
+  <!-- ── Loading Screen ─────────────────────────────────────────── -->
+  <div id="loading-screen" role="status" aria-label="Loading BenchCode Dev">
+    <div class="loader-logo">
+      <svg class="loader-bracket" viewBox="0 0 60 70" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M18 4H8a4 4 0 0 0-4 4v54a4 4 0 0 0 4 4h10" stroke="#1E5FAF" stroke-width="6" stroke-linecap="round"/>
+        <path d="M42 4h10a4 4 0 0 1 4 4v54a4 4 0 0 1-4 4H42" stroke="#1E5FAF" stroke-width="6" stroke-linecap="round"/>
+        <line x1="16" y1="26" x2="34" y2="26" stroke="#27B084" stroke-width="5" stroke-linecap="round"/>
+        <line x1="16" y1="38" x2="28" y2="38" stroke="#27B084" stroke-width="5" stroke-linecap="round"/>
+      </svg>
+      <div class="loader-text">BenchCode <span>Dev</span></div>
+    </div>
+    <div class="loader-bar">
+      <div class="loader-bar-fill"></div>
+    </div>
+  </div>
+
+  <!-- ── Navigation ─────────────────────────────────────────────── -->
+  <nav id="navbar" role="navigation" aria-label="Main navigation">
+    <div class="nav-inner">
+      <a href="#hero" class="nav-logo" aria-label="BenchCode Dev Home">
+        <div class="nav-logo-mark">
+          <svg width="40" height="46" viewBox="0 0 60 70" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M18 4H8a4 4 0 0 0-4 4v54a4 4 0 0 0 4 4h10" stroke="#1E5FAF" stroke-width="6" stroke-linecap="round"/>
+            <path d="M42 4h10a4 4 0 0 1 4 4v54a4 4 0 0 1-4 4H42" stroke="#1E5FAF" stroke-width="6" stroke-linecap="round"/>
+            <line x1="16" y1="26" x2="34" y2="26" stroke="#27B084" stroke-width="5" stroke-linecap="round"/>
+            <line x1="16" y1="38" x2="28" y2="38" stroke="#27B084" stroke-width="5" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <div class="nav-logo-text">BenchCode<span class="dev-tag">DEV</span></div>
+      </a>
+
+      <ul class="nav-menu" role="list">
+        <li><a href="#hero" class="nav-link active">Home</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#services" class="nav-link">Services</a></li>
+        <li><a href="#why" class="nav-link">Solutions</a></li>
+        <li><a href="#portfolio" class="nav-link">Portfolio</a></li>
+        <li><a href="#process" class="nav-link">Process</a></li>
+        <li><a href="#technologies" class="nav-link">Technologies</a></li>
+        <li><a href="#faq" class="nav-link">Insights</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+
+      <div class="nav-right">
+        <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">
+          <svg id="icon-sun" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" style="display:none">
+            <circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+            <line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+          </svg>
+          <svg id="icon-moon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+          </svg>
+        </button>
+        <a href="#contact" class="btn btn-primary btn-sm magnetic-btn">Book Free Consultation</a>
+        <button class="nav-hamburger" id="nav-hamburger" aria-label="Toggle mobile menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div class="nav-mobile" id="nav-mobile" role="menu">
+      <a href="#hero" class="nav-link" role="menuitem">Home</a>
+      <a href="#about" class="nav-link" role="menuitem">About</a>
+      <a href="#services" class="nav-link" role="menuitem">Services</a>
+      <a href="#why" class="nav-link" role="menuitem">Solutions</a>
+      <a href="#portfolio" class="nav-link" role="menuitem">Portfolio</a>
+      <a href="#process" class="nav-link" role="menuitem">Process</a>
+      <a href="#technologies" class="nav-link" role="menuitem">Technologies</a>
+      <a href="#faq" class="nav-link" role="menuitem">Insights</a>
+      <a href="#contact" class="nav-link" role="menuitem">Contact</a>
+      <a href="#contact" class="btn btn-primary">Book Free Consultation</a>
+    </div>
+  </nav>
+
+  <!-- ── Hero Section ───────────────────────────────────────────── -->
+  <section id="hero" aria-label="Hero section">
+    <div class="hero-bg">
+      <canvas id="particles-canvas" aria-hidden="true"></canvas>
+      <div class="hero-gradient"></div>
+      <div class="hero-shape hero-shape-1" aria-hidden="true"></div>
+      <div class="hero-shape hero-shape-2" aria-hidden="true"></div>
+    </div>
+
+    <div class="container">
+      <div class="hero-inner">
+        <div class="hero-content">
+          <div class="hero-badge">
+            <span class="badge-dot" aria-hidden="true"></span>
+            🚀 Trusted IT Partner for Businesses
+          </div>
+
+          <h1 class="hero-title">
+            Empowering Businesses<br>
+            <span class="line-accent">Through Technology</span>
+          </h1>
+
+          <p class="hero-description">
+            BenchCode Dev helps businesses accelerate digital transformation through modern websites, mobile applications, cloud solutions, business automation, UI/UX design, and IT consulting.
+          </p>
+
+          <div class="hero-actions">
+            <a href="#contact" class="btn btn-primary btn-lg magnetic-btn" id="cta-start-project">
+              <span>🚀</span> Start Your Project
+            </a>
+            <a href="#portfolio" class="btn btn-outline btn-lg">
+              View Portfolio →
+            </a>
+          </div>
+
+          <div class="hero-stats">
+            <div class="hero-stat">
+              <div class="hero-stat-num"><span class="counter" data-target="50">0</span>+</div>
+              <div class="hero-stat-label">Projects Completed</div>
+            </div>
+            <div class="hero-stat">
+              <div class="hero-stat-num"><span class="counter" data-target="30">0</span>+</div>
+              <div class="hero-stat-label">Happy Clients</div>
+            </div>
+            <div class="hero-stat">
+              <div class="hero-stat-num"><span class="counter" data-target="3">0</span>+</div>
+              <div class="hero-stat-label">Years Experience</div>
+            </div>
+            <div class="hero-stat">
+              <div class="hero-stat-num">24<span>/</span>7</div>
+              <div class="hero-stat-label">Support</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hero Dashboard Visual -->
+        <div class="hero-visual" aria-hidden="true">
+          <div class="hero-dashboard">
+            <div class="dashboard-main">
+              <div class="dashboard-header">
+                <div class="dashboard-dots">
+                  <span></span><span></span><span></span>
+                </div>
+                <div class="dashboard-title-bar">benchcode-project.dev</div>
+              </div>
+
+              <div class="dashboard-body">
+                <div class="dash-chart-area">
+                  <div class="chart-bar"></div>
+                  <div class="chart-bar"></div>
+                  <div class="chart-bar"></div>
+                  <div class="chart-bar"></div>
+                  <div class="chart-bar"></div>
+                  <div class="chart-bar"></div>
+                  <div class="chart-bar"></div>
+                </div>
+
+                <div class="dash-metrics">
+                  <div class="dash-metric">
+                    <div class="dash-metric-val">128</div>
+                    <div class="dash-metric-label">Commits</div>
+                  </div>
+                  <div class="dash-metric">
+                    <div class="dash-metric-val green">98%</div>
+                    <div class="dash-metric-label">Uptime</div>
+                  </div>
+                  <div class="dash-metric">
+                    <div class="dash-metric-val">2.1s</div>
+                    <div class="dash-metric-label">Load Time</div>
+                  </div>
+                </div>
+
+                <div class="dash-code-snippet">
+                  <div class="code-line"><span class="code-num">1</span><span><span class="kw">const</span> <span class="fn">buildApp</span> = <span class="kw">async</span> () =&gt; {</span></div>
+                  <div class="code-line"><span class="code-num">2</span><span>  <span class="kw">await</span> <span class="fn">deploy</span>(<span class="str">'production'</span>);</span></div>
+                  <div class="code-line"><span class="code-num">3</span><span>  <span class="fn">console</span>.<span class="fn">log</span>(<span class="str">'✅ Done!'</span>);</span></div>
+                  <div class="code-line"><span class="code-num">4</span><span>};</span></div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Floating cards -->
+            <div class="hero-float-card card-1 glass">
+              <div class="float-icon blue">⚡</div>
+              <div class="float-info">
+                <div class="float-label">Performance</div>
+                <div class="float-val">99 / 100</div>
+              </div>
+            </div>
+
+            <div class="hero-float-card card-2 glass">
+              <div class="float-icon green">✅</div>
+              <div class="float-info">
+                <div class="float-label">Build Status</div>
+                <div class="float-val">Success</div>
+              </div>
+            </div>
+
+            <div class="hero-float-card card-3 glass">
+              <div class="float-icon orange">📊</div>
+              <div class="float-info">
+                <div class="float-label">Traffic Today</div>
+                <div class="float-val">+24.3%</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── About Section ──────────────────────────────────────────── -->
+  <section id="about" class="section" aria-labelledby="about-title">
+    <div class="container">
+      <div class="about-grid">
+
+        <div class="about-visual reveal reveal-left">
+          <div class="about-image-wrap">
+            <div class="about-illustration">
+              <div class="illus-row">
+                <div class="illus-card">
+                  <div class="illus-icon">🌐</div>
+                  <div class="illus-info">
+                    <div class="illus-title">Web Development</div>
+                    <div class="illus-sub">React • Next.js • Laravel</div>
+                  </div>
+                </div>
+                <div class="illus-card">
+                  <div class="illus-icon">📱</div>
+                  <div class="illus-info">
+                    <div class="illus-title">Mobile Apps</div>
+                    <div class="illus-sub">Android • iOS • Cross-Platform</div>
+                  </div>
+                </div>
+              </div>
+              <div class="illus-row">
+                <div class="illus-card">
+                  <div class="illus-icon">☁️</div>
+                  <div class="illus-info">
+                    <div class="illus-title">Cloud Solutions</div>
+                    <div class="illus-sub">AWS • GCP • Docker</div>
+                  </div>
+                </div>
+                <div class="illus-card">
+                  <div class="illus-icon">🤖</div>
+                  <div class="illus-info">
+                    <div class="illus-title">AI Automation</div>
+                    <div class="illus-sub">ML • APIs • Integrations</div>
+                  </div>
+                </div>
+              </div>
+              <div class="illus-row">
+                <div class="illus-card">
+                  <div class="illus-icon">🎨</div>
+                  <div class="illus-info">
+                    <div class="illus-title">UI/UX Design</div>
+                    <div class="illus-sub">Figma • Wireframe • Prototype</div>
+                  </div>
+                </div>
+                <div class="illus-card">
+                  <div class="illus-icon">🔒</div>
+                  <div class="illus-info">
+                    <div class="illus-title">Security First</div>
+                    <div class="illus-sub">SSL • Firewall • Backup</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="about-content reveal reveal-right">
+          <div class="section-tag"><span class="dot"></span> About BenchCode Dev</div>
+          <h2 id="about-title" class="section-title">
+            Technology Partner for <span class="highlight">Growing Businesses</span>
+          </h2>
+          <p class="section-subtitle">
+            We focus on helping startups, SMEs, and enterprises build scalable digital products with modern technology. From idea to deployment — BenchCode Dev is your trusted partner every step of the way.
+          </p>
+          <p style="margin-top: 16px; font-size: 15px; color: var(--text-muted); line-height: 1.75;">
+            Our team of experienced engineers, designers, and consultants work together to deliver high-quality solutions that meet your business goals. We don't just build software — we build partnerships that last.
+          </p>
+
+          <div class="about-stats">
+            <div class="stat-card reveal reveal-scale reveal-delay-1">
+              <div class="stat-num"><span class="counter" data-target="50">0</span><span class="stat-accent">+</span></div>
+              <div class="stat-label">Projects Completed</div>
+            </div>
+            <div class="stat-card reveal reveal-scale reveal-delay-2">
+              <div class="stat-num"><span class="counter" data-target="30">0</span><span class="stat-accent">+</span></div>
+              <div class="stat-label">Happy Clients</div>
+            </div>
+            <div class="stat-card reveal reveal-scale reveal-delay-3">
+              <div class="stat-num"><span class="counter" data-target="3">0</span><span class="stat-accent">+</span></div>
+              <div class="stat-label">Years Experience</div>
+            </div>
+            <div class="stat-card reveal reveal-scale reveal-delay-4">
+              <div class="stat-num">24<span class="stat-accent">/7</span></div>
+              <div class="stat-label">Support Availability</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Services Section ───────────────────────────────────────── -->
+  <section id="services" class="section" aria-labelledby="services-title">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag"><span class="dot"></span> Our Services</div>
+        <h2 id="services-title" class="section-title">Everything You Need to <span class="highlight">Scale Digitally</span></h2>
+        <p class="section-subtitle">From concept to launch, we provide end-to-end digital solutions tailored to your business needs.</p>
+      </div>
+
+      <div class="services-grid">
+
+        <article class="service-card reveal reveal-delay-1">
+          <div class="service-icon blue">🌐</div>
+          <h3 class="service-title">Website Development</h3>
+          <p class="service-desc">
+            Professional websites designed to convert visitors into customers. From company profiles to complex web applications.
+          </p>
+          <div class="service-tags">
+            <span class="service-tag">Company Profile</span>
+            <span class="service-tag">Corporate Website</span>
+            <span class="service-tag">Landing Page</span>
+            <span class="service-tag">E-Commerce</span>
+            <span class="service-tag">Web App</span>
+          </div>
+        </article>
+
+        <article class="service-card reveal reveal-delay-2">
+          <div class="service-icon green">📱</div>
+          <h3 class="service-title">Mobile App Development</h3>
+          <p class="service-desc">
+            Native and cross-platform mobile applications that deliver exceptional user experiences on any device.
+          </p>
+          <div class="service-tags">
+            <span class="service-tag">Android</span>
+            <span class="service-tag">iOS</span>
+            <span class="service-tag">Cross Platform</span>
+            <span class="service-tag">React Native</span>
+          </div>
+        </article>
+
+        <article class="service-card reveal reveal-delay-3">
+          <div class="service-icon purple">🎨</div>
+          <h3 class="service-title">UI/UX Design</h3>
+          <p class="service-desc">
+            User-centered design that combines aesthetics with functionality. We create interfaces users love to interact with.
+          </p>
+          <div class="service-tags">
+            <span class="service-tag">Wireframe</span>
+            <span class="service-tag">Prototype</span>
+            <span class="service-tag">User Research</span>
+            <span class="service-tag">Design System</span>
+          </div>
+        </article>
+
+        <article class="service-card reveal reveal-delay-1">
+          <div class="service-icon orange">💡</div>
+          <h3 class="service-title">IT Consulting</h3>
+          <p class="service-desc">
+            Strategic technology advisory to help your business make smarter decisions and plan for sustainable growth.
+          </p>
+          <div class="service-tags">
+            <span class="service-tag">Digital Transformation</span>
+            <span class="service-tag">System Planning</span>
+            <span class="service-tag">Architecture</span>
+          </div>
+        </article>
+
+        <article class="service-card reveal reveal-delay-2">
+          <div class="service-icon teal">☁️</div>
+          <h3 class="service-title">Cloud & API Integration</h3>
+          <p class="service-desc">
+            Seamlessly connect your systems with modern cloud infrastructure and third-party API integrations.
+          </p>
+          <div class="service-tags">
+            <span class="service-tag">AWS</span>
+            <span class="service-tag">Google Cloud</span>
+            <span class="service-tag">API Integration</span>
+            <span class="service-tag">Docker</span>
+          </div>
+        </article>
+
+        <article class="service-card reveal reveal-delay-3">
+          <div class="service-icon red">⚙️</div>
+          <h3 class="service-title">Automation Solutions</h3>
+          <p class="service-desc">
+            Streamline your workflows and eliminate repetitive tasks with intelligent automation and AI-powered tools.
+          </p>
+          <div class="service-tags">
+            <span class="service-tag">AI Integration</span>
+            <span class="service-tag">Process Automation</span>
+            <span class="service-tag">ERP</span>
+            <span class="service-tag">CRM</span>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Why Choose Us ──────────────────────────────────────────── -->
+  <section id="why" class="section" aria-labelledby="why-title">
+    <div class="why-bg-shape" aria-hidden="true"></div>
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag"><span class="dot"></span> Why BenchCode Dev</div>
+        <h2 id="why-title" class="section-title">Built Different, <span class="highlight">Built Better</span></h2>
+        <p class="section-subtitle">We combine technical expertise with business understanding to deliver results that matter.</p>
+      </div>
+
+      <div class="why-grid">
+        <div class="why-card reveal reveal-delay-1">
+          <div class="why-icon">👨‍💻</div>
+          <h3 class="why-title">Experienced Team</h3>
+          <p class="why-desc">Seasoned developers, designers, and consultants with proven track records across industries.</p>
+        </div>
+        <div class="why-card reveal reveal-delay-2">
+          <div class="why-icon">📐</div>
+          <h3 class="why-title">Scalable Architecture</h3>
+          <p class="why-desc">Built to grow with your business. Our solutions handle today's needs and tomorrow's demands.</p>
+        </div>
+        <div class="why-card reveal reveal-delay-3">
+          <div class="why-icon">✨</div>
+          <h3 class="why-title">Clean Code</h3>
+          <p class="why-desc">Maintainable, well-documented code following industry best practices and modern standards.</p>
+        </div>
+        <div class="why-card reveal reveal-delay-1">
+          <div class="why-icon">🔒</div>
+          <h3 class="why-title">Security First</h3>
+          <p class="why-desc">Every project is built with security at its core — protecting your data and your users.</p>
+        </div>
+        <div class="why-card reveal reveal-delay-2">
+          <div class="why-icon">⚡</div>
+          <h3 class="why-title">Modern Tech Stack</h3>
+          <p class="why-desc">Always using the latest, proven technologies to ensure your product stays relevant and competitive.</p>
+        </div>
+        <div class="why-card reveal reveal-delay-3">
+          <div class="why-icon">🚀</div>
+          <h3 class="why-title">Fast Delivery</h3>
+          <p class="why-desc">Agile development methodology ensures on-time delivery without compromising on quality.</p>
+        </div>
+        <div class="why-card reveal reveal-delay-1">
+          <div class="why-icon">📱</div>
+          <h3 class="why-title">Responsive Design</h3>
+          <p class="why-desc">Every pixel-perfect design works flawlessly across all devices and screen sizes.</p>
+        </div>
+        <div class="why-card reveal reveal-delay-2">
+          <div class="why-icon">🔍</div>
+          <h3 class="why-title">SEO Friendly</h3>
+          <p class="why-desc">Optimized for search engines from day one — helping your business get found online.</p>
+        </div>
+        <div class="why-card reveal reveal-delay-3">
+          <div class="why-icon">🤝</div>
+          <h3 class="why-title">Long-term Support</h3>
+          <p class="why-desc">We're your long-term partner — providing maintenance, updates, and ongoing support.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Process Section ────────────────────────────────────────── -->
+  <section id="process" class="section" aria-labelledby="process-title">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag"><span class="dot"></span> How We Work</div>
+        <h2 id="process-title" class="section-title">Our <span class="highlight">Development Process</span></h2>
+        <p class="section-subtitle">A proven, systematic approach that ensures quality delivery from day one.</p>
+      </div>
+
+      <div class="process-timeline">
+        <div class="process-line"><div class="process-line-fill" id="process-line-fill"></div></div>
+
+        <div class="process-step reveal">
+          <div class="process-marker">
+            <div class="process-num">01</div>
+          </div>
+          <div class="process-content">
+            <h3 class="process-step-title"><span class="process-step-icon">🔍</span> Discovery</h3>
+            <p class="process-step-desc">We dive deep into your business goals, target audience, competitors, and requirements. This phase sets the foundation for everything that follows.</p>
+          </div>
+        </div>
+
+        <div class="process-step reveal reveal-delay-1">
+          <div class="process-marker">
+            <div class="process-num">02</div>
+          </div>
+          <div class="process-content">
+            <h3 class="process-step-title"><span class="process-step-icon">📋</span> Planning</h3>
+            <p class="process-step-desc">Detailed project roadmap, technology selection, architecture planning, timeline definition, and resource allocation. No surprises.</p>
+          </div>
+        </div>
+
+        <div class="process-step reveal reveal-delay-2">
+          <div class="process-marker">
+            <div class="process-num">03</div>
+          </div>
+          <div class="process-content">
+            <h3 class="process-step-title"><span class="process-step-icon">🎨</span> UI/UX Design</h3>
+            <p class="process-step-desc">Wireframes, prototypes, and high-fidelity designs crafted with your brand identity. We iterate until you love it.</p>
+          </div>
+        </div>
+
+        <div class="process-step reveal reveal-delay-3">
+          <div class="process-marker">
+            <div class="process-num">04</div>
+          </div>
+          <div class="process-content">
+            <h3 class="process-step-title"><span class="process-step-icon">⚡</span> Development</h3>
+            <p class="process-step-desc">Clean, scalable code built with modern frameworks. Regular sprint reviews keep you informed and in control throughout.</p>
+          </div>
+        </div>
+
+        <div class="process-step reveal reveal-delay-1">
+          <div class="process-marker">
+            <div class="process-num">05</div>
+          </div>
+          <div class="process-content">
+            <h3 class="process-step-title"><span class="process-step-icon">🧪</span> Testing</h3>
+            <p class="process-step-desc">Comprehensive QA testing including functionality, performance, security, and cross-browser/device compatibility.</p>
+          </div>
+        </div>
+
+        <div class="process-step reveal reveal-delay-2">
+          <div class="process-marker">
+            <div class="process-num">06</div>
+          </div>
+          <div class="process-content">
+            <h3 class="process-step-title"><span class="process-step-icon">🚀</span> Deployment</h3>
+            <p class="process-step-desc">Smooth, zero-downtime deployment to production with full monitoring setup and performance optimization.</p>
+          </div>
+        </div>
+
+        <div class="process-step reveal reveal-delay-3">
+          <div class="process-marker">
+            <div class="process-num">07</div>
+          </div>
+          <div class="process-content">
+            <h3 class="process-step-title"><span class="process-step-icon">🔧</span> Maintenance</h3>
+            <p class="process-step-desc">Ongoing support, security updates, performance monitoring, and feature enhancements to keep your product at its best.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Technologies ───────────────────────────────────────────── -->
+  <section id="technologies" class="section" aria-labelledby="tech-title">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag"><span class="dot"></span> Our Stack</div>
+        <h2 id="tech-title" class="section-title">Modern <span class="highlight">Technology Stack</span></h2>
+        <p class="section-subtitle">We work with industry-leading technologies to build future-proof solutions.</p>
+      </div>
+
+      <div class="tech-categories">
+        <div class="tech-category reveal">
+          <div class="tech-cat-title">Frontend</div>
+          <div class="tech-badges">
+            <span class="tech-badge"><span class="tech-emoji">⚛️</span> React</span>
+            <span class="tech-badge"><span class="tech-emoji">▲</span> Next.js</span>
+            <span class="tech-badge"><span class="tech-emoji">💚</span> Vue.js</span>
+            <span class="tech-badge"><span class="tech-emoji">🌐</span> HTML5</span>
+            <span class="tech-badge"><span class="tech-emoji">🎨</span> CSS3</span>
+            <span class="tech-badge"><span class="tech-emoji">🌬️</span> Tailwind</span>
+            <span class="tech-badge"><span class="tech-emoji">🅱️</span> Bootstrap</span>
+          </div>
+        </div>
+
+        <div class="tech-category reveal reveal-delay-1">
+          <div class="tech-cat-title">Backend</div>
+          <div class="tech-badges">
+            <span class="tech-badge"><span class="tech-emoji">🟢</span> Node.js</span>
+            <span class="tech-badge"><span class="tech-emoji">🔴</span> Laravel</span>
+            <span class="tech-badge"><span class="tech-emoji">🐘</span> PHP</span>
+            <span class="tech-badge"><span class="tech-emoji">🐍</span> Python</span>
+            <span class="tech-badge"><span class="tech-emoji">☕</span> Java</span>
+          </div>
+        </div>
+
+        <div class="tech-category reveal reveal-delay-2">
+          <div class="tech-cat-title">Database</div>
+          <div class="tech-badges">
+            <span class="tech-badge"><span class="tech-emoji">🐬</span> MySQL</span>
+            <span class="tech-badge"><span class="tech-emoji">🐘</span> PostgreSQL</span>
+            <span class="tech-badge"><span class="tech-emoji">🔥</span> Firebase</span>
+            <span class="tech-badge"><span class="tech-emoji">🍃</span> MongoDB</span>
+          </div>
+        </div>
+
+        <div class="tech-category reveal reveal-delay-3">
+          <div class="tech-cat-title">Cloud & DevOps</div>
+          <div class="tech-badges">
+            <span class="tech-badge"><span class="tech-emoji">☁️</span> AWS</span>
+            <span class="tech-badge"><span class="tech-emoji">🌏</span> Google Cloud</span>
+            <span class="tech-badge"><span class="tech-emoji">🌩️</span> Cloudflare</span>
+            <span class="tech-badge"><span class="tech-emoji">🐳</span> Docker</span>
+          </div>
+        </div>
+
+        <div class="tech-category reveal reveal-delay-1">
+          <div class="tech-cat-title">Tools</div>
+          <div class="tech-badges">
+            <span class="tech-badge"><span class="tech-emoji">🐙</span> GitHub</span>
+            <span class="tech-badge"><span class="tech-emoji">🎨</span> Figma</span>
+            <span class="tech-badge"><span class="tech-emoji">📮</span> Postman</span>
+            <span class="tech-badge"><span class="tech-emoji">💻</span> VS Code</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Portfolio ──────────────────────────────────────────────── -->
+  <section id="portfolio" class="section" aria-labelledby="portfolio-title">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag"><span class="dot"></span> Our Work</div>
+        <h2 id="portfolio-title" class="section-title">Featured <span class="highlight">Portfolio</span></h2>
+        <p class="section-subtitle">A selection of projects we've delivered for clients across various industries.</p>
+      </div>
+
+      <div class="portfolio-filters" role="tablist" aria-label="Portfolio filters">
+        <button class="portfolio-filter active" data-filter="all" role="tab" aria-selected="true">All Projects</button>
+        <button class="portfolio-filter" data-filter="corporate" role="tab">Corporate</button>
+        <button class="portfolio-filter" data-filter="webapp" role="tab">Web App</button>
+        <button class="portfolio-filter" data-filter="mobile" role="tab">Mobile</button>
+        <button class="portfolio-filter" data-filter="ecommerce" role="tab">E-Commerce</button>
+      </div>
+
+      <div class="portfolio-grid" id="portfolio-grid">
+
+        <!-- Real portfolio item 1 -->
+        <article class="portfolio-card reveal reveal-delay-1" data-category="corporate">
+          <div class="portfolio-thumb">
+            <img src="assets/portfolio_elevara.png" alt="Elevara Synergy - Human Growth Consulting Website" loading="lazy" />
+            <div class="portfolio-overlay">
+              <div class="portfolio-overlay-content">
+                <div class="portfolio-overlay-title">Elevara Synergy</div>
+                <div class="portfolio-overlay-tech">
+                  <span class="overlay-tag">React</span>
+                  <span class="overlay-tag">Tailwind</span>
+                  <span class="overlay-tag">Node.js</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="portfolio-info">
+            <div class="portfolio-category">Corporate • Consulting</div>
+            <h3 class="portfolio-name">Elevara Synergy</h3>
+            <p class="portfolio-desc">Human growth consulting platform with modern SaaS design, dynamic stats, and consultation booking system.</p>
+          </div>
+        </article>
+
+        <!-- Real portfolio item 2 -->
+        <article class="portfolio-card reveal reveal-delay-2" data-category="corporate">
+          <div class="portfolio-thumb" style="background: linear-gradient(135deg, #0f2d6e, #1a4a9e); display:flex; align-items:center; justify-content:center;">
+            <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:12px;color:white;">
+              <div style="font-size:48px;">⛽</div>
+              <div style="font-family:'Space Grotesk',sans-serif;font-size:22px;font-weight:700;">Bumigas</div>
+              <div style="font-size:13px;opacity:0.7;">CNG Energy Company</div>
+            </div>
+            <div class="portfolio-overlay">
+              <div class="portfolio-overlay-content">
+                <div class="portfolio-overlay-title">Bumigas Corporate Website</div>
+                <div class="portfolio-overlay-tech">
+                  <span class="overlay-tag">HTML/CSS</span>
+                  <span class="overlay-tag">JavaScript</span>
+                  <span class="overlay-tag">PHP</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="portfolio-info">
+            <div class="portfolio-category">Corporate • Energy</div>
+            <h3 class="portfolio-name">Bumigas Indonesia</h3>
+            <p class="portfolio-desc">Corporate website for a leading CNG energy provider in Indonesia with industrial-grade design and performance.</p>
+          </div>
+        </article>
+
+        <!-- Real portfolio item 3 -->
+        <article class="portfolio-card reveal reveal-delay-3" data-category="corporate">
+          <div class="portfolio-thumb" style="background: linear-gradient(135deg, #1a1a2e, #4a4a72); display:flex; align-items:center; justify-content:center;">
+            <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:12px;color:white;">
+              <div style="font-size:48px;">🏛️</div>
+              <div style="font-family:'Space Grotesk',sans-serif;font-size:18px;font-weight:700;text-align:center;padding:0 20px;">IF Interior Project</div>
+              <div style="font-size:13px;opacity:0.7;">Interior & Architecture</div>
+            </div>
+            <div class="portfolio-overlay">
+              <div class="portfolio-overlay-content">
+                <div class="portfolio-overlay-title">IF Interior Project</div>
+                <div class="portfolio-overlay-tech">
+                  <span class="overlay-tag">Next.js</span>
+                  <span class="overlay-tag">Framer Motion</span>
+                  <span class="overlay-tag">Figma</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="portfolio-info">
+            <div class="portfolio-category">Corporate • Architecture</div>
+            <h3 class="portfolio-name">IF Interior Project</h3>
+            <p class="portfolio-desc">Luxury interior design and architecture firm website with elegant minimalism and premium visual storytelling.</p>
+          </div>
+        </article>
+
+        <!-- Additional portfolio items -->
+        <article class="portfolio-card reveal reveal-delay-1" data-category="webapp">
+          <div class="portfolio-thumb portfolio-bg-4" style="display:flex;align-items:center;justify-content:center;">
+            <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:12px;color:white;">
+              <div style="font-size:48px;">📊</div>
+              <div style="font-family:'Space Grotesk',sans-serif;font-size:20px;font-weight:700;">ERP Dashboard</div>
+              <div style="font-size:13px;opacity:0.7;">Enterprise Resource Planning</div>
+            </div>
+            <div class="portfolio-overlay">
+              <div class="portfolio-overlay-content">
+                <div class="portfolio-overlay-title">Enterprise ERP System</div>
+                <div class="portfolio-overlay-tech">
+                  <span class="overlay-tag">React</span>
+                  <span class="overlay-tag">Laravel</span>
+                  <span class="overlay-tag">MySQL</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="portfolio-info">
+            <div class="portfolio-category">Web App • ERP</div>
+            <h3 class="portfolio-name">Enterprise ERP System</h3>
+            <p class="portfolio-desc">Full-featured ERP with inventory, HR, accounting, and analytics modules for a manufacturing company.</p>
+          </div>
+        </article>
+
+        <article class="portfolio-card reveal reveal-delay-2" data-category="ecommerce">
+          <div class="portfolio-thumb portfolio-bg-5" style="display:flex;align-items:center;justify-content:center;">
+            <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:12px;color:white;">
+              <div style="font-size:48px;">🛒</div>
+              <div style="font-family:'Space Grotesk',sans-serif;font-size:20px;font-weight:700;">E-Commerce Platform</div>
+              <div style="font-size:13px;opacity:0.7;">Multi-vendor Marketplace</div>
+            </div>
+            <div class="portfolio-overlay">
+              <div class="portfolio-overlay-content">
+                <div class="portfolio-overlay-title">Multi-Vendor Marketplace</div>
+                <div class="portfolio-overlay-tech">
+                  <span class="overlay-tag">Vue.js</span>
+                  <span class="overlay-tag">Node.js</span>
+                  <span class="overlay-tag">MongoDB</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="portfolio-info">
+            <div class="portfolio-category">E-Commerce • Marketplace</div>
+            <h3 class="portfolio-name">Multi-Vendor Marketplace</h3>
+            <p class="portfolio-desc">Scalable e-commerce platform with multi-vendor support, payment gateway, and real-time order tracking.</p>
+          </div>
+        </article>
+
+        <article class="portfolio-card reveal reveal-delay-3" data-category="webapp">
+          <div class="portfolio-thumb portfolio-bg-1" style="display:flex;align-items:center;justify-content:center;">
+            <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:12px;color:white;">
+              <div style="font-size:48px;">📅</div>
+              <div style="font-family:'Space Grotesk',sans-serif;font-size:20px;font-weight:700;">Booking System</div>
+              <div style="font-size:13px;opacity:0.7;">Healthcare Appointment</div>
+            </div>
+            <div class="portfolio-overlay">
+              <div class="portfolio-overlay-content">
+                <div class="portfolio-overlay-title">Healthcare Booking System</div>
+                <div class="portfolio-overlay-tech">
+                  <span class="overlay-tag">React</span>
+                  <span class="overlay-tag">Firebase</span>
+                  <span class="overlay-tag">Tailwind</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="portfolio-info">
+            <div class="portfolio-category">Web App • Healthcare</div>
+            <h3 class="portfolio-name">Healthcare Booking System</h3>
+            <p class="portfolio-desc">Online appointment booking platform for a healthcare clinic with doctor scheduling and patient management.</p>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── FAQ Section ────────────────────────────────────────────── -->
+  <section id="faq" class="section" aria-labelledby="faq-title">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag"><span class="dot"></span> Insights</div>
+        <h2 id="faq-title" class="section-title">Frequently Asked <span class="highlight">Questions</span></h2>
+        <p class="section-subtitle">Everything you need to know before starting your project with us.</p>
+      </div>
+
+      <div class="faq-grid">
+
+        <div class="faq-item reveal reveal-delay-1">
+          <button class="faq-question" aria-expanded="false">
+            <span class="faq-q-text">How much does it cost to build a website?</span>
+            <span class="faq-icon" aria-hidden="true">+</span>
+          </button>
+          <div class="faq-answer" role="region">
+            <div class="faq-answer-inner">
+              Project costs depend on scope, complexity, and requirements. A simple company profile website starts from a few million rupiah, while complex web applications vary significantly. We provide detailed, transparent quotes after understanding your needs — contact us for a free consultation.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item reveal reveal-delay-2">
+          <button class="faq-question" aria-expanded="false">
+            <span class="faq-q-text">How long does development take?</span>
+            <span class="faq-icon" aria-hidden="true">+</span>
+          </button>
+          <div class="faq-answer" role="region">
+            <div class="faq-answer-inner">
+              Timeline varies by project complexity. A landing page typically takes 1-3 days, company websites 3-5 days, and complex web applications or mobile apps 2–6 months. We provide clear timelines in our project proposal.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item reveal reveal-delay-3">
+          <button class="faq-question" aria-expanded="false">
+            <span class="faq-q-text">Do you provide hosting and domain services?</span>
+            <span class="faq-icon" aria-hidden="true">+</span>
+          </button>
+          <div class="faq-answer" role="region">
+            <div class="faq-answer-inner">
+              Yes! We can help you set up hosting and domain registration, or work with your existing provider. We recommend reliable hosting solutions based on your traffic needs and budget, and can manage everything for you.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item reveal reveal-delay-1">
+          <button class="faq-question" aria-expanded="false">
+            <span class="faq-q-text">What maintenance and support do you offer?</span>
+            <span class="faq-icon" aria-hidden="true">+</span>
+          </button>
+          <div class="faq-answer" role="region">
+            <div class="faq-answer-inner">
+              We offer flexible maintenance packages including regular updates, security patches, performance monitoring, bug fixes, and feature enhancements. 24/7 emergency support is available for critical issues to ensure your system stays online.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item reveal reveal-delay-2">
+          <button class="faq-question" aria-expanded="false">
+            <span class="faq-q-text">Can you redesign or upgrade my existing website?</span>
+            <span class="faq-icon" aria-hidden="true">+</span>
+          </button>
+          <div class="faq-answer" role="region">
+            <div class="faq-answer-inner">
+              Absolutely! We specialize in website redesigns and technology migrations. Whether you need a modern facelift or a complete rebuild with a new tech stack, we handle it while minimizing disruption to your current operations.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item reveal reveal-delay-3">
+          <button class="faq-question" aria-expanded="false">
+            <span class="faq-q-text">Do you work with clients outside Indonesia?</span>
+            <span class="faq-icon" aria-hidden="true">+</span>
+          </button>
+          <div class="faq-answer" role="region">
+            <div class="faq-answer-inner">
+              Yes! We work with clients internationally. Our team communicates in Bahasa Indonesia and English, and we're experienced with remote collaboration using modern project management and communication tools.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item reveal reveal-delay-1">
+          <button class="faq-question" aria-expanded="false">
+            <span class="faq-q-text">What technologies do you specialize in?</span>
+            <span class="faq-icon" aria-hidden="true">+</span>
+          </button>
+          <div class="faq-answer" role="region">
+            <div class="faq-answer-inner">
+              Our core stack includes React, Next.js, Vue.js for frontend; Node.js, Laravel, Python for backend; MySQL, PostgreSQL, MongoDB for databases; and AWS, Google Cloud for infrastructure. We select the best technology based on your specific project requirements.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item reveal reveal-delay-2">
+          <button class="faq-question" aria-expanded="false">
+            <span class="faq-q-text">How do I get started with a project?</span>
+            <span class="faq-icon" aria-hidden="true">+</span>
+          </button>
+          <div class="faq-answer" role="region">
+            <div class="faq-answer-inner">
+              Simply reach out via WhatsApp, email, or the contact form. We'll schedule a free consultation call to understand your requirements, then provide a detailed proposal with timeline and cost breakdown — no obligation.
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Contact CTA ────────────────────────────────────────────── -->
+  <section id="contact" class="section" aria-labelledby="contact-title">
+    <div class="container">
+      <div class="contact-inner">
+        <div class="contact-shape contact-shape-1" aria-hidden="true"></div>
+        <div class="contact-shape contact-shape-2" aria-hidden="true"></div>
+
+        <p class="section-tag" style="display:inline-flex;background:rgba(255,255,255,.15);color:white;margin-bottom:24px;">
+          <span style="width:6px;height:6px;background:#27B084;border-radius:50%;display:inline-block;margin-right:8px;animation:blink 2s ease-in-out infinite;"></span>
+          Ready to Start?
+        </p>
+
+        <h2 id="contact-title" class="contact-title">
+          Let's Build Something<br>Amazing Together.
+        </h2>
+        <p class="contact-subtitle">
+          Whether you need a website, mobile app, or complete digital transformation — we're ready to make it happen.
+        </p>
+
+        <div class="contact-actions">
+          <a href="https://wa.me/6208112603399" target="_blank" rel="noopener noreferrer" class="btn btn-white btn-lg" id="cta-whatsapp">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="#25D366" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.025.507 3.934 1.399 5.612L0 24l6.561-1.379A11.956 11.956 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 0 1-5.003-1.374l-.36-.213-3.732.784.795-3.642-.233-.373A9.818 9.818 0 1 1 12 21.818z"/></svg>
+            WhatsApp Us
+          </a>
+          <a href="mailto:benchcodedev@gmail.com" class="btn btn-outline-white btn-lg" id="cta-email">
+            📧 Send Email
+          </a>
+          <a href="#portfolio" class="btn btn-outline-white btn-lg">
+            View Portfolio
+          </a>
+        </div>
+
+        <div style="margin-top:40px;display:flex;align-items:center;justify-content:center;gap:32px;flex-wrap:wrap;position:relative;z-index:1;">
+          <div style="display:flex;align-items:center;gap:8px;color:rgba(255,255,255,.7);font-size:14px;">
+            <span style="font-size:18px;">✅</span> Free Consultation
+          </div>
+          <div style="display:flex;align-items:center;gap:8px;color:rgba(255,255,255,.7);font-size:14px;">
+            <span style="font-size:18px;">✅</span> No Commitment
+          </div>
+          <div style="display:flex;align-items:center;gap:8px;color:rgba(255,255,255,.7);font-size:14px;">
+            <span style="font-size:18px;">✅</span> Fast Response
+          </div>
+          <div style="display:flex;align-items:center;gap:8px;color:rgba(255,255,255,.7);font-size:14px;">
+            <span style="font-size:18px;">✅</span> 24/7 Support
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Footer ─────────────────────────────────────────────────── -->
+  <footer id="footer" aria-label="Site footer">
+    <div class="container">
+      <div class="footer-grid">
+
+        <!-- Brand col -->
+        <div class="footer-brand">
+          <div class="footer-logo">
+            <svg width="36" height="42" viewBox="0 0 60 70" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M18 4H8a4 4 0 0 0-4 4v54a4 4 0 0 0 4 4h10" stroke="#3A7FD4" stroke-width="6" stroke-linecap="round"/>
+              <path d="M42 4h10a4 4 0 0 1 4 4v54a4 4 0 0 1-4 4H42" stroke="#3A7FD4" stroke-width="6" stroke-linecap="round"/>
+              <line x1="16" y1="26" x2="34" y2="26" stroke="#27B084" stroke-width="5" stroke-linecap="round"/>
+              <line x1="16" y1="38" x2="28" y2="38" stroke="#27B084" stroke-width="5" stroke-linecap="round"/>
+            </svg>
+            <div class="footer-logo-text">BenchCode<span class="dev-tag">DEV</span></div>
+          </div>
+          <p class="footer-desc">
+            Your trusted IT partner for digital transformation. We build modern websites, mobile apps, and scalable software solutions that drive business growth.
+          </p>
+          <div class="footer-social">
+            <a href="https://wa.me/6208112603399" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="WhatsApp">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.025.507 3.934 1.399 5.612L0 24l6.561-1.379A11.956 11.956 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 0 1-5.003-1.374l-.36-.213-3.732.784.795-3.642-.233-.373A9.818 9.818 0 1 1 12 21.818z"/></svg>
+            </a>
+            <a href="mailto:benchcodedev@gmail.com" class="social-btn" aria-label="Email">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            </a>
+            <a href="#" class="social-btn" aria-label="LinkedIn">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
+            </a>
+            <a href="#" class="social-btn" aria-label="GitHub">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div>
+          <h3 class="footer-col-title">Quick Links</h3>
+          <ul class="footer-links">
+            <li><a href="#hero" class="footer-link">Home</a></li>
+            <li><a href="#about" class="footer-link">About Us</a></li>
+            <li><a href="#services" class="footer-link">Services</a></li>
+            <li><a href="#portfolio" class="footer-link">Portfolio</a></li>
+            <li><a href="#process" class="footer-link">Our Process</a></li>
+            <li><a href="#faq" class="footer-link">FAQ</a></li>
+          </ul>
+        </div>
+
+        <!-- Services -->
+        <div>
+          <h3 class="footer-col-title">Services</h3>
+          <ul class="footer-links">
+            <li><a href="#services" class="footer-link">Website Development</a></li>
+            <li><a href="#services" class="footer-link">Mobile Apps</a></li>
+            <li><a href="#services" class="footer-link">UI/UX Design</a></li>
+            <li><a href="#services" class="footer-link">IT Consulting</a></li>
+            <li><a href="#services" class="footer-link">Cloud Integration</a></li>
+            <li><a href="#services" class="footer-link">Automation</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact -->
+        <div>
+          <h3 class="footer-col-title">Contact Us</h3>
+          <div class="footer-contact">
+            <div class="footer-contact-item">
+              <span class="icon">📧</span>
+              <div><a href="mailto:benchcodedev@gmail.com">benchcodedev@gmail.com</a></div>
+            </div>
+            <div class="footer-contact-item">
+              <span class="icon">📱</span>
+              <div><a href="https://wa.me/6208112603399" target="_blank" rel="noopener noreferrer">+62 811-2603-399</a></div>
+            </div>
+            <div class="footer-contact-item">
+              <span class="icon">🕐</span>
+              <div>24/7 Support Available</div>
+            </div>
+            <div class="footer-contact-item">
+              <span class="icon">🌐</span>
+              <div>Available Remotely — Indonesia & Worldwide</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <p class="footer-copy">
+          © 2024 <span>BenchCode Dev</span>. All rights reserved. Built with ❤️ for digital excellence.
+        </p>
+        <p class="footer-copy">
+          IT Consultant & Software Development
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ── WhatsApp Float Button ─────────────────────────────────── -->
+  <a href="https://wa.me/6208112603399" target="_blank" rel="noopener noreferrer" id="whatsapp-float" aria-label="Chat with us on WhatsApp">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+      <path d="M12 0C5.373 0 0 5.373 0 12c0 2.025.507 3.934 1.399 5.612L0 24l6.561-1.379A11.956 11.956 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 0 1-5.003-1.374l-.36-.213-3.732.784.795-3.642-.233-.373A9.818 9.818 0 1 1 12 21.818z"/>
+    </svg>
+  </a>
+
+  <!-- ── Back to Top ─────────────────────────────────────────────── -->
+  <button id="back-to-top" aria-label="Back to top">↑</button>
+
+  <script src="script.js"></script>
+</body>
+</html>
