@@ -1367,6 +1367,16 @@ input, textarea { font: inherit; }
   cursor: default;
 }
 
+.tech-badge img {
+  width: 18px;
+  height: 18px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+[data-theme="dark"] .tech-badge img[src*="nextjs"] {
+  filter: invert(1);
+}
 .tech-badge:hover {
   border-color: var(--primary);
   color: var(--primary);
