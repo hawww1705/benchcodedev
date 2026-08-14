@@ -746,12 +746,8 @@
 
         <!-- Additional portfolio items -->
         <article class="portfolio-card reveal reveal-delay-1" data-category="webapp">
-          <div class="portfolio-thumb portfolio-bg-4" style="display:flex;align-items:center;justify-content:center;">
-            <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:12px;color:white;">
-              <div style="font-size:48px;">📊</div>
-              <div style="font-family:'Space Grotesk',sans-serif;font-size:20px;font-weight:700;">ERP Dashboard</div>
-              <div style="font-size:13px;opacity:0.7;">Enterprise Resource Planning</div>
-            </div>
+          <div class="portfolio-thumb" onclick="openErpModal(0)" style="cursor:pointer;">
+            <img src="assets/erp_1.png" alt="Enterprise ERP System - Operations Dashboard" loading="lazy" />
             <div class="portfolio-overlay">
               <div class="portfolio-overlay-content">
                 <div class="portfolio-overlay-title">Enterprise ERP System</div>
@@ -759,14 +755,25 @@
                   <span class="overlay-tag">React</span>
                   <span class="overlay-tag">Laravel</span>
                   <span class="overlay-tag">MySQL</span>
+                  <span class="overlay-tag">WMS</span>
+                </div>
+                <div style="margin-top:8px;">
+                  <button onclick="event.stopPropagation(); openErpModal(0);" class="btn btn-sm btn-white" style="font-size:12px;padding:6px 14px;">
+                    🖼️ View Screenshots (10)
+                  </button>
                 </div>
               </div>
             </div>
           </div>
           <div class="portfolio-info">
-            <div class="portfolio-category">Web App • ERP</div>
+            <div class="portfolio-category">Web App • ERP System</div>
             <h3 class="portfolio-name">Enterprise ERP System</h3>
-            <p class="portfolio-desc">Full-featured ERP with inventory, HR, accounting, and analytics modules for a manufacturing company.</p>
+            <p class="portfolio-desc">Comprehensive ERP platform featuring HRIS dashboard, Warehouse WMS stock catalog, CRM funnel analytics, Procurement PO workflows, and Sales invoicing.</p>
+            <div style="margin-top:12px;">
+              <button onclick="openErpModal(0)" style="font-size:13px;font-weight:600;color:var(--primary);display:inline-flex;align-items:center;gap:6px;background:none;border:none;cursor:pointer;padding:0;">
+                🖼️ View Screenshots Gallery (10 Screens) ↗
+              </button>
+            </div>
           </div>
         </article>
 
@@ -1090,8 +1097,42 @@
     </svg>
   </a>
 
-  <!-- ── Back to Top ─────────────────────────────────────────────── -->
-  <button id="back-to-top" aria-label="Back to top">↑</button>
+  <!-- ── ERP System Screenshots Lightbox Modal ─────────────────── -->
+  <div id="erp-modal" class="erp-modal" role="dialog" aria-modal="true" aria-label="ERP System Screenshots Gallery">
+    <div class="erp-modal-container">
+      <div class="erp-modal-header">
+        <div class="erp-modal-title">
+          <span>📊</span> Enterprise ERP System — Module Screenshots
+        </div>
+        <button class="erp-modal-close" onclick="closeErpModal()" aria-label="Close modal">✕</button>
+      </div>
+
+      <div class="erp-modal-body">
+        <button class="erp-nav-btn erp-nav-prev" onclick="prevErpSlide()" aria-label="Previous screenshot">‹</button>
+        <img id="erp-modal-img" src="assets/erp_1.png" alt="ERP Screenshot" />
+        <button class="erp-nav-btn erp-nav-next" onclick="nextErpSlide()" aria-label="Next screenshot">›</button>
+      </div>
+
+      <div class="erp-modal-footer">
+        <div class="erp-caption-row">
+          <span id="erp-caption-text" class="erp-caption-text">Dashboard Overview & Performance Metrics</span>
+          <span id="erp-counter" class="erp-counter">Screen 1 of 5</span>
+        </div>
+        <div class="erp-thumbs-strip" id="erp-thumbs-strip">
+          <div class="erp-thumb-item active" onclick="setErpSlide(0)"><img src="assets/erp_1.png" alt="Screen 1" /></div>
+          <div class="erp-thumb-item" onclick="setErpSlide(1)"><img src="assets/erp_2.png" alt="Screen 2" /></div>
+          <div class="erp-thumb-item" onclick="setErpSlide(2)"><img src="assets/erp_3.png" alt="Screen 3" /></div>
+          <div class="erp-thumb-item" onclick="setErpSlide(3)"><img src="assets/erp_4.png" alt="Screen 4" /></div>
+          <div class="erp-thumb-item" onclick="setErpSlide(4)"><img src="assets/erp_5.png" alt="Screen 5" /></div>
+          <div class="erp-thumb-item" onclick="setErpSlide(5)"><img src="assets/erp_6.png" alt="Screen 6" /></div>
+          <div class="erp-thumb-item" onclick="setErpSlide(6)"><img src="assets/erp_7.png" alt="Screen 7" /></div>
+          <div class="erp-thumb-item" onclick="setErpSlide(7)"><img src="assets/erp_8.png" alt="Screen 8" /></div>
+          <div class="erp-thumb-item" onclick="setErpSlide(8)"><img src="assets/erp_9.png" alt="Screen 9" /></div>
+          <div class="erp-thumb-item" onclick="setErpSlide(9)"><img src="assets/erp_10.png" alt="Screen 10" /></div>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <script src="script.js"></script>
 </body>

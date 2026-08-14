@@ -547,3 +547,80 @@ document.addEventListener('DOMContentLoaded', () => {
   updateBackToTop();
   updateScrollProgress();
 });
+
+/* ── ERP Modal Lightbox Gallery ─────────────────────────────────── */
+const erpScreenshots = [
+  { src: 'assets/erp_1.png', caption: '1. Dashboard Overview & HR Performance Metrics' },
+  { src: 'assets/erp_2.png', caption: '2. Gudang & Stok WMS — Katalog Data SKU Barang' },
+  { src: 'assets/erp_3.png', caption: '3. Pengadaan & PO — Daftar Purchase Order' },
+  { src: 'assets/erp_4.png', caption: '4. Faktur Pembelian — Modal Transaksi Supplier' },
+  { src: 'assets/erp_5.png', caption: '5. Sales Order — Manajemen Order Penjualan' },
+  { src: 'assets/erp_6.png', caption: '6. Penjualan Langsung — Listing Transaksi Direct Sales' },
+  { src: 'assets/erp_7.png', caption: '7. CRM Pelanggan — Dashboard Analytics Leads & Funnel' },
+  { src: 'assets/erp_8.png', caption: '8. CRM Aktivitas & Follow-up — Schedule Meeting & Demo' },
+  { src: 'assets/erp_9.png', caption: '9. HRIS & Karyawan — Absensi, Presensi & Analytics' },
+  { src: 'assets/erp_10.png', caption: '10. Remunerasi Payroll — Manajemen Slip Gaji & Tunjangan' }
+];
+
+let currentErpIndex = 0;
+
+function openErpModal(index = 0) {
+  const modal = document.getElementById('erp-modal');
+  if (!modal) return;
+  modal.classList.add('active');
+  document.body.style.overflow = 'hidden';
+  setErpSlide(index);
+}
+
+function closeErpModal() {
+  const modal = document.getElementById('erp-modal');
+  if (!modal) return;
+  modal.classList.remove('active');
+  document.body.style.overflow = '';
+}
+
+function setErpSlide(index) {
+  if (index < 0) index = erpScreenshots.length - 1;
+  if (index >= erpScreenshots.length) index = 0;
+  currentErpIndex = index;
+
+  const img = document.getElementById('erp-modal-img');
+  const caption = document.getElementById('erp-caption-text');
+  const counter = document.getElementById('erp-counter');
+  const thumbs = document.querySelectorAll('.erp-thumb-item');
+
+  if (img) {
+    img.style.opacity = '0.3';
+    setTimeout(() => {
+      img.src = erpScreenshots[index].src;
+      img.alt = erpScreenshots[index].caption;
+      img.style.opacity = '1';
+    }, 120);
+  }
+
+  if (caption) caption.textContent = erpScreenshots[index].caption;
+  if (counter) counter.textContent = `Screen ${index + 1} of ${erpScreenshots.length}`;
+
+  thumbs.forEach((t, i) => {
+    if (i === index) t.classList.add('active');
+    else t.classList.remove('active');
+  });
+}
+
+function prevErpSlide() {
+  setErpSlide(currentErpIndex - 1);
+}
+
+function nextErpSlide() {
+  setErpSlide(currentErpIndex + 1);
+}
+
+// Keyboard events for ERP Modal
+document.addEventListener('keydown', (e) => {
+  const modal = document.getElementById('erp-modal');
+  if (modal && modal.classList.contains('active')) {
+    if (e.key === 'Escape') closeErpModal();
+    if (e.key === 'ArrowLeft') prevErpSlide();
+    if (e.key === 'ArrowRight') nextErpSlide();
+  }
+});
